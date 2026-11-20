@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Services | Systemis</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed": "#a8edcf",
+                    "on-surface-variant": "#55605a",
+                    "surface-tint": "#00966e",
+                    "on-primary-fixed-variant": "#0a3325",
+                    "on-secondary-fixed-variant": "#680eac",
+                    "tertiary-fixed": "#e7deff",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed": "#f1dbff",
+                    "tertiary-container": "#c3b3ff",
+                    "primary-container": "#00a878",
+                    "on-surface": "#0d0d0d",
+                    "on-error": "#690005",
+                    "on-secondary-fixed": "#2d0050",
+                    "on-tertiary-fixed-variant": "#4c10cc",
+                    "on-secondary": "#ffffff",
+                    "outline": "#889089",
+                    "secondary-fixed-dim": "#7b2cbf",
+                    "surface-container-low": "#f5f5f0",
+                    "surface-container-highest": "#e2e4df",
+                    "on-background": "#0d0d0d",
+                    "on-primary-fixed": "#021810",
+                    "on-primary": "#04140e",
+                    "primary-fixed-dim": "#00966e",
+                    "on-tertiary-fixed": "#1e0060",
+                    "surface-container": "#eef0ec",
+                    "background": "#ffffff",
+                    "secondary": "#7b2cbf",
+                    "on-primary-container": "#04140e",
+                    "inverse-on-surface": "#dfe1dc",
+                    "surface-variant": "#e2e4df",
+                    "surface": "#ffffff",
+                    "outline-variant": "#e4e8e5",
+                    "surface-container-high": "#e8eae5",
+                    "secondary-container": "#6b13af",
+                    "on-error-container": "#ffdad6",
+                    "inverse-surface": "#0d0d0d",
+                    "primary": "#00795a",
+                    "error": "#ffb4ab",
+                    "surface-dim": "#ffffff",
+                    "error-container": "#93000a",
+                    "surface-bright": "#ffffff",
+                    "tertiary-fixed-dim": "#ccbeff",
+                    "on-tertiary": "#340098",
+                    "on-tertiary-container": "#521dd1",
+                    "on-secondary-container": "#4a007f",
+                    "inverse-primary": "#00785a",
+                    "tertiary": "#6b21c9"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Playfair Display"],
+                    "display": ["Playfair Display"],
+                    "body": ["Space Grotesk"],
+                    "label": ["Space Grotesk"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .intervention-grain {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.03;
+            pointer-events: none;
+        }
+        .glass-panel {
+            background: rgba(0,0,0,0.04);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(0,0,0,0.07);
+        }
+        .gold-glow:hover {
+            box-shadow: 0 10px 30px -5px rgba(0,168,120, 0.3);
+            transform: translateY(-1px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<div class="intervention-grain fixed inset-0 z-[100]"></div>
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-md dark:bg-white/70 flex justify-between items-center px-8 py-4 max-w-full mx-auto font-['Space_Grotesk'] tracking-tight">
+<a href="/" style="display:flex; align-items:center; text-decoration:none;">
+<img src="Systemis_LogoPack/02_logo_systemis_light.svg" alt="Systemis" style="height:36px; width:auto;"/>
+</a>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-zinc-600 hover:text-zinc-900 transition-colors" href="/">Accueil</a>
+<a class="text-zinc-600 hover:text-zinc-900 transition-colors" href="/about">À propos</a>
+<a class="text-emerald-600 border-b-2 border-emerald-600 pb-1" href="/service">Services</a>
+<a class="text-zinc-600 hover:text-zinc-900 transition-colors" href="/blog">Blog</a>
+<a class="text-zinc-600 hover:text-zinc-900 transition-colors" href="/contact">Contact</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-lg font-bold hover:scale-95 active:scale-90 transition-all duration-300 shadow-[0_10px_30px_-5px_rgba(0,168,120,0.3)]">
+            Diagnostic gratuit</button>
+</nav>
+<main class="pt-20">
+<!-- HERO SECTION -->
+<section class="relative min-height-[819px] bg-[#7b2cbf] overflow-hidden flex items-center py-24">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,168,120,0.15)_0%,transparent_70%)]"></div>
+<div class="max-w-7xl mx-auto px-8 w-full grid grid-cols-1 lg:grid-cols-2 gap-16 relative z-10">
+<div class="flex flex-col justify-center">
+<span class="text-white text-xs font-black tracking-[0.2em] mb-6 font-label uppercase">NOS SERVICES</span>
+<h1 class="font-display text-5xl md:text-6xl font-bold leading-[1.1] text-white tracking-tight mb-8">
+                        Notre cœur de métier est le marketing basé sur la transformation digitale.
+                    </h1>
+<p class="font-body text-xl text-white/80 max-w-xl mb-10 leading-relaxed">
+                        Nous fusionnons l'intelligence stratégique et les technologies de pointe pour orchestrer des interventions qui redéfinissent la trajectoire de votre croissance.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary-container text-on-primary-container px-8 py-4 rounded font-extrabold gold-glow transition-all">
+                            Audit gratuit
+                        </button>
+<button class="border border-white/40 text-white px-8 py-4 rounded font-bold hover:bg-white/10 transition-all">
+                            Demander un devis
+                        </button>
+</div>
+</div>
+<div class="relative hidden lg:flex items-center justify-center h-[500px]">
+<!-- Floating Geometric Panels -->
+<div class="glass-panel absolute w-64 h-80 rounded-xl transform -rotate-12 -translate-x-20 -translate-y-10 flex flex-col p-6 shadow-2xl">
+<div class="w-12 h-1 bg-primary-container mb-auto"></div>
+<div class="space-y-3">
+<div class="h-4 bg-black/5 w-3/4 rounded-sm"></div>
+<div class="h-4 bg-black/5 w-1/2 rounded-sm"></div>
+</div>
+</div>
+<div class="glass-panel absolute w-72 h-48 rounded-xl transform rotate-6 translate-x-10 translate-y-20 flex items-center justify-center shadow-2xl">
+<span class="material-symbols-outlined text-[#a8edcf] text-6xl">insights</span>
+</div>
+<div class="glass-panel absolute w-56 h-56 rounded-xl transform -rotate-3 translate-x-24 -translate-y-24 flex p-4 shadow-2xl">
+<div class="mt-auto w-full h-1/2 bg-gradient-to-t from-secondary-container/40 to-transparent rounded-sm"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- SERVICES OVERVIEW GRID -->
+<section class="bg-[#ffffff] py-32">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-24">
+<span class="text-[#00795a] text-xs font-black tracking-[0.2em] font-label uppercase">CE QUE NOUS FAISONS</span>
+<h2 class="font-display text-4xl md:text-5xl font-semibold text-zinc-900 mt-4 tracking-tight">Des interventions conçues pour transformer.</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="group bg-[#f5f5f0] p-8 relative overflow-hidden transition-all duration-300 hover:bg-[#eef0ec]">
+<div class="absolute top-0 left-0 w-full h-[1px] bg-[#7b2cbf]/10"></div>
+<div class="flex justify-between items-start mb-12">
+<span class="material-symbols-outlined text-[#00795a] text-3xl">bar_chart</span>
+<span class="material-symbols-outlined text-zinc-500 group-hover:text-primary transition-colors">north_east</span>
+</div>
+<h3 class="font-display text-2xl text-zinc-900 mb-4">Analyse &amp; études de marché</h3>
+<p class="font-body text-on-surface-variant text-sm leading-relaxed">
+                            Plongez au cœur des données pour identifier les opportunités invisibles et les menaces émergentes de votre secteur.
+                        </p>
+</div>
+<!-- Card 2 -->
+<div class="group bg-[#f5f5f0] p-8 relative overflow-hidden transition-all duration-300 hover:bg-[#eef0ec] md:translate-y-8">
+<div class="absolute top-0 left-0 w-full h-[1px] bg-[#7b2cbf]/10"></div>
+<div class="flex justify-between items-start mb-12">
+<span class="material-symbols-outlined text-[#00795a] text-3xl">target</span>
+<span class="material-symbols-outlined text-zinc-500 group-hover:text-primary transition-colors">north_east</span>
+</div>
+<h3 class="font-display text-2xl text-zinc-900 mb-4">Conception &amp; Déploiement de stratégies commerciales</h3>
+<p class="font-body text-on-surface-variant text-sm leading-relaxed">
+                            Nous bâtissons des moteurs de vente robustes basés sur des tactiques d'acquisition agressives et pérennes.
+                        </p>
+</div>
+<!-- Card 3 -->
+<div class="group bg-[#f5f5f0] p-8 relative overflow-hidden transition-all duration-300 hover:bg-[#eef0ec]">
+<div class="absolute top-0 left-0 w-full h-[1px] bg-[#7b2cbf]/10"></div>
+<div class="flex justify-between items-start mb-12">
+<span class="material-symbols-outlined text-[#00795a] text-3xl">layers</span>
+<span class="material-symbols-outlined text-zinc-500 group-hover:text-primary transition-colors">north_east</span>
+</div>
+<h3 class="font-display text-2xl text-zinc-900 mb-4">Conception et Modélisation de projets</h3>
+<p class="font-body text-on-surface-variant text-sm leading-relaxed">
+                            Architecture de solutions complexes, du concept initial à la simulation de viabilité économique.
+                        </p>
+</div>
+<!-- Card 4 -->
+<div class="group bg-[#f5f5f0] p-8 relative overflow-hidden transition-all duration-300 hover:bg-[#eef0ec]">
+<div class="absolute top-0 left-0 w-full h-[1px] bg-[#7b2cbf]/10"></div>
+<div class="flex justify-between items-start mb-12">
+<span class="material-symbols-outlined text-[#00795a] text-3xl">bolt</span>
+<span class="material-symbols-outlined text-zinc-500 group-hover:text-primary transition-colors">north_east</span>
+</div>
+<h3 class="font-display text-2xl text-zinc-900 mb-4">Stratégie et transformation digitale</h3>
+<p class="font-body text-on-surface-variant text-sm leading-relaxed">
+                            Digitalisez votre ADN opérationnel pour gagner en agilité et en réactivité face aux mutations du marché.
+                        </p>
+</div>
+<!-- Card 5 -->
+<div class="group bg-[#f5f5f0] p-8 relative overflow-hidden transition-all duration-300 hover:bg-[#eef0ec] md:translate-y-8">
+<div class="absolute top-0 left-0 w-full h-[1px] bg-[#7b2cbf]/10"></div>
+<div class="flex justify-between items-start mb-12">
+<span class="material-symbols-outlined text-[#00795a] text-3xl">settings</span>
+<span class="material-symbols-outlined text-zinc-500 group-hover:text-primary transition-colors">north_east</span>
+</div>
+<h3 class="font-display text-2xl text-zinc-900 mb-4">Structuration &amp; Optimisation de process</h3>
+<p class="font-body text-on-surface-variant text-sm leading-relaxed">
+                            Éliminez les frictions internes pour une fluidité maximale et une rentabilité accrue de chaque action.
+                        </p>
+</div>
+<!-- Card 6 -->
+<div class="group bg-[#f5f5f0] p-8 relative overflow-hidden transition-all duration-300 hover:bg-[#eef0ec]">
+<div class="absolute top-0 left-0 w-full h-[1px] bg-[#7b2cbf]/10"></div>
+<div class="flex justify-between items-start mb-12">
+<span class="material-symbols-outlined text-[#00795a] text-3xl">code</span>
+<span class="material-symbols-outlined text-zinc-500 group-hover:text-primary transition-colors">north_east</span>
+</div>
+<h3 class="font-display text-2xl text-zinc-900 mb-4">Création &amp; Déploiement de solutions digitales</h3>
+<p class="font-body text-on-surface-variant text-sm leading-relaxed">
+                            Développement de produits numériques sur mesure (SaaS, Apps) conçus pour capturer de la valeur.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- TESTIMONIALS CAROUSEL -->
+<section class="bg-[#f5f5f0] py-32 relative overflow-hidden">
+<div class="max-w-7xl mx-auto px-8">
+<div class="mb-20">
+<span class="text-[#00795a] text-xs font-black tracking-[0.2em] font-label uppercase">ILS NOUS FONT CONFIANCE</span>
+<h2 class="font-display text-4xl font-semibold text-zinc-900 mt-4">Ce qu'ils disent de nous.</h2>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Testimonial 1 -->
+<div class="bg-[#ffffff] p-10 flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-[#7b2cbf] text-4xl mb-8">format_quote</span>
+<div class="flex text-[#00795a] mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="italic text-on-surface-variant text-lg leading-relaxed mb-8">
+                                "L'intervention de Systemis a radicalement changé notre approche du marché. Leur précision stratégique est chirurgicale."
+                            </p>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Professional portrait of a corporate executive in a dark tailored suit, looking confident and direct. The lighting is dramatic and high-contrast, matching the obsidian and gold aesthetic of the brand. The background is a blurred office interior with cool blue and deep charcoal tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWCS75h9mauLOkibDDI0Z9YFBpav_HHl-1JabfeGv_c0T4aCQ_zzvwk-bCC2lx6JXK19sc1Zl-vFOYoFceEFxDonh4KosgHrWt_wuBx-sAPS2TLq9Di183DK3J9h7ouU4b1wJ6r_GHT3yxpK3RO_qiKwDnce0aUcobSFtoS83st_cGDhBBPW8g2yP_sd8RRPh3t3r9I-rZyuPyu-kzRe8aaZYVq2oIvPqU1vQGXIODNCl7t1Ap8CHtTffw6VTWulRSbvyDV8jqcLo"/>
+</div>
+<div>
+<p class="text-zinc-900 font-bold text-sm">Marc DUPONT</p>
+<p class="text-zinc-500 text-xs uppercase tracking-wider">CEO, TechFlow</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-[#ffffff] p-10 flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-[#7b2cbf] text-4xl mb-8">format_quote</span>
+<div class="flex text-[#00795a] mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="italic text-on-surface-variant text-lg leading-relaxed mb-8">
+                                "Nous cherchions des experts en transformation digitale, nous avons trouvé des architectes de croissance. Un ROI exceptionnel."
+                            </p>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of a female business leader in a modern professional setting. She wears a dark blazer over a light shirt. The lighting is crisp and sophisticated, highlighting her features against a dark, tech-focused background. Subtle purple and yellow light reflections on glass surfaces in the background echo the brand's primary colors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-J2d_Nx8Y2XqTSrRUo4KSBUAuJl65LY65aSn360zAuV9wX2nfwu67IpCJYPV-YEmrLaCrsdpQm2qLLWVLaRpbk5kjzZwgypZJTVITVic2-zB3awODwgJKre-dtA4XxpPvYh4G5QlW72IKXF95AEUzlcoQOCjjCU2jGKibtE61auxZfGzg7pu4HgMsVKbbJ1B80MNu1EkwB-2JOAs0sQXFcNKr9srwd7faaMkbnevDxk3ZSf9MZIu_pL6gUXl56xT0wfvDLRjXe0w"/>
+</div>
+<div>
+<p class="text-zinc-900 font-bold text-sm">Sarah LENORMAND</p>
+<p class="text-zinc-500 text-xs uppercase tracking-wider">COO, Global Logistic</p>
+</div>
+</div>
+</div>
+<!-- Fixed CTA Card -->
+<div class="bg-[#7b2cbf] p-10 flex flex-col justify-center relative overflow-hidden shadow-2xl">
+<div class="intervention-grain absolute inset-0 opacity-10"></div>
+<div class="relative z-10 text-center">
+<h3 class="font-display text-3xl font-bold text-white mb-8">Votre entreprise mérite une intervention sur mesure.</h3>
+<button class="w-full bg-primary-container text-on-primary-container px-6 py-4 rounded font-extrabold gold-glow transition-all">
+                                Rejoindre le cercle
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FINAL CTA -->
+<section class="bg-[#7b2cbf] py-32 relative overflow-hidden">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,168,120,0.2)_0%,transparent_70%)]"></div>
+<div class="intervention-grain absolute inset-0 opacity-10"></div>
+<div class="max-w-4xl mx-auto px-8 relative z-10 text-center">
+<h2 class="font-display text-4xl md:text-6xl font-bold text-white mb-12 tracking-tight">
+                    Votre croissance mérite mieux que l'improvisation.
+                </h2>
+<button class="bg-primary-container text-on-primary-container text-lg px-10 py-5 rounded font-black gold-glow transition-all">
+                    Réservez votre diagnostic gratuit
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-zinc-950 border-t border-primary-container/20 w-full">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-16 w-full max-w-7xl mx-auto">
+<!-- Brand -->
+<div class="space-y-6">
+<img src="Systemis_LogoPack/01_logo_systemis_dark.svg" alt="Systemis" style="height:44px; width:auto;"/>
+<p class="text-zinc-500 text-sm leading-relaxed">
+                    Conseil en stratégie et intervention opérationnelle. Nous transformons le potentiel en performance mesurable.
+                </p>
+<div class="flex gap-4 items-center">
+<a class="text-zinc-400 hover:text-[#0A66C2] transition-colors inline-flex" href="https://www.linkedin.com/company/systemispro/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+<a class="text-zinc-400 hover:text-[#0866FF] transition-colors inline-flex" href="https://www.facebook.com/systemispro" target="_blank" rel="noopener" aria-label="Facebook"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg></a>
+<a class="text-zinc-400 hover:text-emerald-400 transition-colors inline-flex" href="mailto:call@systemis.pro" aria-label="Email"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+</div>
+<!-- Links -->
+<div class="space-y-6">
+<h5 class="text-white font-bold uppercase text-xs tracking-widest">Navigation</h5>
+<ul class="space-y-4 text-sm font-body">
+<li><a class="text-zinc-500 hover:text-white transition-colors" href="/">Accueil</a></li>
+<li><a class="text-zinc-500 hover:text-white transition-colors" href="/about">À propos</a></li>
+<li><a class="text-zinc-500 hover:text-white transition-colors" href="/service">Services</a></li>
+<li><a class="text-zinc-500 hover:text-white transition-colors" href="#">Blog</a></li>
+<li><a class="text-zinc-500 hover:text-white transition-colors" href="/contact">Contact</a></li>
+</ul>
+</div>
+<!-- Expertise -->
+<div class="space-y-6">
+<h5 class="text-white font-bold uppercase text-xs tracking-widest">Expertise</h5>
+<ul class="space-y-4 text-sm font-body">
+<li><a class="text-zinc-500 hover:text-white transition-colors" href="#">Audit &amp; Diagnostic</a></li>
+<li><a class="text-zinc-500 hover:text-white transition-colors" href="#">Structuration Process</a></li>
+<li><a class="text-zinc-500 hover:text-white transition-colors" href="#">Accélération Sales</a></li>
+<li><a class="text-zinc-500 hover:text-white transition-colors" href="#">Stratégie Marque</a></li>
+</ul>
+</div>
+<!-- Contact -->
+<div class="space-y-6">
+<h5 class="text-white font-bold uppercase text-xs tracking-widest">Contact</h5>
+<ul class="space-y-4 text-sm font-body text-zinc-500">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-emerald-500 text-sm">location_on</span>
+<span>Cotonou, Bénin</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-emerald-500 text-sm">mail</span>
+<a class="hover:text-white transition-colors" href="mailto:call@systemis.pro">call@systemis.pro</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="px-12 py-8 border-t border-zinc-800/20 text-center">
+<p class="text-zinc-500 text-xs">© 2026 Systemis.&nbsp; All Rights Reserved</p>
+</div>
+</footer>
+<script src="assetsystemis/diagnostic-modal.js"></script>
+</body></html>
