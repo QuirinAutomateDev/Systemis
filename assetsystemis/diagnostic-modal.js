@@ -19,30 +19,32 @@
 
         <!-- Étape 1 -->
         <div id="modal-step-1" style="padding:0 32px 32px;">
+          <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute; left:-9999px; width:1px; height:1px; opacity:0;"/>
           <div style="display:grid; gap:14px;">
             <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
               <div>
                 <label style="display:block; font-family:'Space Grotesk',sans-serif; font-size:11px; font-weight:700; color:#55605a; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:7px;">Prénom</label>
-                <input type="text" placeholder="Jean" style="width:100%; background:#ffffff; border:1px solid rgba(0,0,0,0.12); border-radius:4px; padding:11px 13px; color:#0d0d0d; font-family:'Space Grotesk',sans-serif; font-size:14px; outline:none; box-sizing:border-box;" onfocus="this.style.borderColor='#00a878'" onblur="this.style.borderColor='rgba(0,0,0,0.12)'"/>
+                <input type="text" name="firstName" autocomplete="given-name" required placeholder="Jean" style="width:100%; background:#ffffff; border:1px solid rgba(0,0,0,0.12); border-radius:4px; padding:11px 13px; color:#0d0d0d; font-family:'Space Grotesk',sans-serif; font-size:14px; outline:none; box-sizing:border-box;" onfocus="this.style.borderColor='#00a878'" onblur="this.style.borderColor='rgba(0,0,0,0.12)'"/>
               </div>
               <div>
                 <label style="display:block; font-family:'Space Grotesk',sans-serif; font-size:11px; font-weight:700; color:#55605a; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:7px;">Nom</label>
-                <input type="text" placeholder="Dupont" style="width:100%; background:#ffffff; border:1px solid rgba(0,0,0,0.12); border-radius:4px; padding:11px 13px; color:#0d0d0d; font-family:'Space Grotesk',sans-serif; font-size:14px; outline:none; box-sizing:border-box;" onfocus="this.style.borderColor='#00a878'" onblur="this.style.borderColor='rgba(0,0,0,0.12)'"/>
+                <input type="text" name="lastName" autocomplete="family-name" required placeholder="Dupont" style="width:100%; background:#ffffff; border:1px solid rgba(0,0,0,0.12); border-radius:4px; padding:11px 13px; color:#0d0d0d; font-family:'Space Grotesk',sans-serif; font-size:14px; outline:none; box-sizing:border-box;" onfocus="this.style.borderColor='#00a878'" onblur="this.style.borderColor='rgba(0,0,0,0.12)'"/>
               </div>
             </div>
             <div>
               <label style="display:block; font-family:'Space Grotesk',sans-serif; font-size:11px; font-weight:700; color:#55605a; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:7px;">Email professionnel</label>
-              <input type="email" placeholder="jean@entreprise.com" style="width:100%; background:#ffffff; border:1px solid rgba(0,0,0,0.12); border-radius:4px; padding:11px 13px; color:#0d0d0d; font-family:'Space Grotesk',sans-serif; font-size:14px; outline:none; box-sizing:border-box;" onfocus="this.style.borderColor='#00a878'" onblur="this.style.borderColor='rgba(0,0,0,0.12)'"/>
+              <input type="email" name="email" autocomplete="email" required placeholder="jean@entreprise.com" style="width:100%; background:#ffffff; border:1px solid rgba(0,0,0,0.12); border-radius:4px; padding:11px 13px; color:#0d0d0d; font-family:'Space Grotesk',sans-serif; font-size:14px; outline:none; box-sizing:border-box;" onfocus="this.style.borderColor='#00a878'" onblur="this.style.borderColor='rgba(0,0,0,0.12)'"/>
             </div>
             <div>
               <label style="display:block; font-family:'Space Grotesk',sans-serif; font-size:11px; font-weight:700; color:#55605a; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:7px;">WhatsApp / Téléphone</label>
-              <input type="tel" placeholder="+229 XX XX XX XX" style="width:100%; background:#ffffff; border:1px solid rgba(0,0,0,0.12); border-radius:4px; padding:11px 13px; color:#0d0d0d; font-family:'Space Grotesk',sans-serif; font-size:14px; outline:none; box-sizing:border-box;" onfocus="this.style.borderColor='#00a878'" onblur="this.style.borderColor='rgba(0,0,0,0.12)'"/>
+              <input type="tel" name="phone" autocomplete="tel" placeholder="+229 XX XX XX XX" style="width:100%; background:#ffffff; border:1px solid rgba(0,0,0,0.12); border-radius:4px; padding:11px 13px; color:#0d0d0d; font-family:'Space Grotesk',sans-serif; font-size:14px; outline:none; box-sizing:border-box;" onfocus="this.style.borderColor='#00a878'" onblur="this.style.borderColor='rgba(0,0,0,0.12)'"/>
             </div>
             <div>
               <label style="display:block; font-family:'Space Grotesk',sans-serif; font-size:11px; font-weight:700; color:#55605a; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:7px;">Nom de l'entreprise</label>
-              <input type="text" placeholder="Mon Entreprise SARL" style="width:100%; background:#ffffff; border:1px solid rgba(0,0,0,0.12); border-radius:4px; padding:11px 13px; color:#0d0d0d; font-family:'Space Grotesk',sans-serif; font-size:14px; outline:none; box-sizing:border-box;" onfocus="this.style.borderColor='#00a878'" onblur="this.style.borderColor='rgba(0,0,0,0.12)'"/>
+              <input type="text" name="company" autocomplete="organization" placeholder="Mon Entreprise SARL" style="width:100%; background:#ffffff; border:1px solid rgba(0,0,0,0.12); border-radius:4px; padding:11px 13px; color:#0d0d0d; font-family:'Space Grotesk',sans-serif; font-size:14px; outline:none; box-sizing:border-box;" onfocus="this.style.borderColor='#00a878'" onblur="this.style.borderColor='rgba(0,0,0,0.12)'"/>
             </div>
           </div>
+          <p class="diag-error" role="alert" style="display:none; margin-top:14px; font-family:'Space Grotesk',sans-serif; font-size:13px; color:#ba1a1a;"></p>
           <button onclick="goToStep2()" style="width:100%; margin-top:22px; background:#00a878; color:#04140e; padding:13px; border:none; border-radius:4px; font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:700; cursor:pointer; letter-spacing:-0.3px;">
             Continuer →
           </button>
@@ -53,7 +55,7 @@
           <div style="display:grid; gap:14px;">
             <div>
               <label style="display:block; font-family:'Space Grotesk',sans-serif; font-size:11px; font-weight:700; color:#55605a; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:7px;">Secteur d'activité</label>
-              <select style="width:100%; background:#ffffff; border:1px solid rgba(0,0,0,0.12); border-radius:4px; padding:11px 13px; color:#0d0d0d; font-family:'Space Grotesk',sans-serif; font-size:14px; outline:none; box-sizing:border-box;" onfocus="this.style.borderColor='#00a878'" onblur="this.style.borderColor='rgba(0,0,0,0.12)'">
+              <select name="sector" style="width:100%; background:#ffffff; border:1px solid rgba(0,0,0,0.12); border-radius:4px; padding:11px 13px; color:#0d0d0d; font-family:'Space Grotesk',sans-serif; font-size:14px; outline:none; box-sizing:border-box;" onfocus="this.style.borderColor='#00a878'" onblur="this.style.borderColor='rgba(0,0,0,0.12)'">
                 <option value="" style="background:#eef0ec;">Sélectionnez votre secteur</option>
                 <option value="commerce" style="background:#eef0ec;">Commerce &amp; Distribution</option>
                 <option value="tech" style="background:#eef0ec;">Technologie &amp; Digital</option>
@@ -84,14 +86,14 @@
             </div>
             <div>
               <label style="display:block; font-family:'Space Grotesk',sans-serif; font-size:11px; font-weight:700; color:#55605a; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:7px;">Principal défi en ce moment</label>
-              <textarea placeholder="Décrivez brièvement votre situation et ce que vous souhaitez améliorer..." rows="4" style="width:100%; background:#ffffff; border:1px solid rgba(0,0,0,0.12); border-radius:4px; padding:11px 13px; color:#0d0d0d; font-family:'Space Grotesk',sans-serif; font-size:14px; outline:none; box-sizing:border-box; resize:vertical;" onfocus="this.style.borderColor='#00a878'" onblur="this.style.borderColor='rgba(0,0,0,0.12)'"></textarea>
+              <textarea name="topic" placeholder="Décrivez brièvement votre situation et ce que vous souhaitez améliorer..." rows="4" style="width:100%; background:#ffffff; border:1px solid rgba(0,0,0,0.12); border-radius:4px; padding:11px 13px; color:#0d0d0d; font-family:'Space Grotesk',sans-serif; font-size:14px; outline:none; box-sizing:border-box; resize:vertical;" onfocus="this.style.borderColor='#00a878'" onblur="this.style.borderColor='rgba(0,0,0,0.12)'"></textarea>
             </div>
             <div>
               <label style="display:block; font-family:'Space Grotesk',sans-serif; font-size:11px; font-weight:700; color:#55605a; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:7px;">
                 Comment nous avez-vous connus ?
                 <span style="font-weight:400; text-transform:none; font-size:11px;"> (optionnel)</span>
               </label>
-              <select style="width:100%; background:#ffffff; border:1px solid rgba(0,0,0,0.12); border-radius:4px; padding:11px 13px; color:#0d0d0d; font-family:'Space Grotesk',sans-serif; font-size:14px; outline:none; box-sizing:border-box;" onfocus="this.style.borderColor='#00a878'" onblur="this.style.borderColor='rgba(0,0,0,0.12)'">
+              <select name="referral" style="width:100%; background:#ffffff; border:1px solid rgba(0,0,0,0.12); border-radius:4px; padding:11px 13px; color:#0d0d0d; font-family:'Space Grotesk',sans-serif; font-size:14px; outline:none; box-sizing:border-box;" onfocus="this.style.borderColor='#00a878'" onblur="this.style.borderColor='rgba(0,0,0,0.12)'">
                 <option value="" style="background:#eef0ec;">Sélectionnez une option</option>
                 <option value="reseaux" style="background:#eef0ec;">Réseaux sociaux</option>
                 <option value="bouche" style="background:#eef0ec;">Bouche à oreille</option>
@@ -101,11 +103,12 @@
               </select>
             </div>
           </div>
+          <p class="diag-error" role="alert" style="display:none; margin-top:14px; font-family:'Space Grotesk',sans-serif; font-size:13px; color:#ba1a1a;"></p>
           <div style="display:flex; gap:12px; margin-top:22px;">
             <button onclick="goToStep1()" style="flex:1; background:transparent; color:#55605a; padding:13px; border:1px solid rgba(0,0,0,0.07); border-radius:4px; font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:700; cursor:pointer;">
               ← Retour
             </button>
-            <button onclick="submitDiagnostic()" style="flex:2; background:#00a878; color:#04140e; padding:13px; border:none; border-radius:4px; font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:700; cursor:pointer; letter-spacing:-0.3px;">
+            <button id="diag-submit" onclick="submitDiagnostic()" style="flex:2; background:#00a878; color:#04140e; padding:13px; border:none; border-radius:4px; font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:700; cursor:pointer; letter-spacing:-0.3px;">
               Envoyer ma demande
             </button>
           </div>
@@ -150,7 +153,33 @@
     document.body.style.overflow = '';
   };
 
+  function modal() { return document.getElementById('diagnostic-modal'); }
+  function field(name) { return modal().querySelector('[name="' + name + '"]'); }
+  function value(name) {
+    if (name === 'size') {
+      var r = modal().querySelector('[name="diag-taille"]:checked');
+      return r ? r.value : '';
+    }
+    var el = field(name);
+    return el ? el.value.trim() : '';
+  }
+  function showError(step, msg) {
+    var el = document.querySelector('#modal-step-' + step + ' .diag-error');
+    el.textContent = msg || '';
+    el.style.display = msg ? 'block' : 'none';
+  }
+
   window.goToStep2 = function () {
+    if (!value('firstName') || !value('lastName')) {
+      showError(1, 'Merci d\'indiquer votre prénom et votre nom.');
+      return;
+    }
+    if (!window.SystemisLeads.isEmail(value('email'))) {
+      showError(1, 'Merci d\'indiquer une adresse e-mail valide.');
+      field('email').focus();
+      return;
+    }
+    showError(1, '');
     document.getElementById('modal-step-1').style.display = 'none';
     document.getElementById('modal-step-2').style.display = 'block';
     document.getElementById('step-bar-2').style.background = '#00a878';
@@ -175,11 +204,52 @@
   };
 
   window.submitDiagnostic = function () {
-    document.getElementById('modal-step-2').style.display = 'none';
-    document.getElementById('modal-success').style.display = 'block';
+    var btn = document.getElementById('diag-submit');
+    if (btn.disabled) return;
+    var label = btn.innerHTML;
+    btn.disabled = true;
+    btn.style.opacity = '0.6';
+    btn.textContent = 'Envoi en cours…';
+    showError(2, '');
+
+    window.SystemisLeads.send({
+      source: 'Diagnostic',
+      firstName: value('firstName'),
+      lastName: value('lastName'),
+      email: value('email'),
+      phone: value('phone'),
+      company: value('company'),
+      sector: value('sector'),
+      size: value('size'),
+      topic: value('topic'),
+      referral: value('referral'),
+      website: value('website'),
+    })
+      .then(function () {
+        document.getElementById('modal-step-2').style.display = 'none';
+        document.getElementById('modal-success').style.display = 'block';
+        modal().querySelectorAll('input, select, textarea').forEach(function (el) {
+          if (el.type === 'radio') el.checked = false; else el.value = '';
+        });
+        document.querySelectorAll('.taille-opt').forEach(function (el) {
+          el.style.borderColor = 'rgba(0,0,0,0.12)';
+          el.style.color = '#55605a';
+          el.style.background = 'transparent';
+        });
+      })
+      .catch(function () {
+        showError(2, window.SystemisLeads.errorMessage);
+      })
+      .then(function () {
+        btn.disabled = false;
+        btn.style.opacity = '';
+        btn.innerHTML = label;
+      });
   };
 
   function resetModal() {
+    showError(1, '');
+    showError(2, '');
     document.getElementById('modal-step-1').style.display = 'block';
     document.getElementById('modal-step-2').style.display = 'none';
     document.getElementById('modal-success').style.display = 'none';
