@@ -5,7 +5,7 @@
  */
 (function () {
   // URL de l'application Web Apps Script (Déployer > Application Web).
-  var ENDPOINT = 'COLLER_ICI_URL_APPS_SCRIPT';
+  var ENDPOINT = 'https://script.google.com/macros/s/AKfycbzbBJXpsrW1D3xzsPWQPzkjthFw-ZvNpGZxuB2CxaujopI0x4x7ILRZwCEWQp9Ejrrd/exec';
 
   var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
